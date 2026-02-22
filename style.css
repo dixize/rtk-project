@@ -1,0 +1,45 @@
+:root { --accent: #ff4f12; --dark: #050608; --card: #121418; }
+
+* { 
+    box-sizing: border-box; 
+    -webkit-tap-highlight-color: transparent; /* Убирает белую обводку при клике */
+    outline: none !important; 
+}
+
+body { margin: 0; background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; }
+
+.nav-item { 
+    height: 180px; border-radius: 24px; margin-bottom: 15px;
+    background-size: cover; background-position: center;
+    position: relative; overflow: hidden; cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none; /* Убираем любые рамки */
+}
+
+.nav-item:active { transform: scale(0.96); }
+
+.modal-overlay { 
+    position: fixed; inset: 0; background: rgba(0,0,0,0.8); 
+    backdrop-filter: blur(15px); /* Эффект размытия фона */
+    z-index: 9999; overflow-y: auto; /* Скролл теперь тут */
+}
+
+.modal-window { 
+    background: linear-gradient(180deg, rgba(20,22,26,0.9) 0%, var(--dark) 100%);
+    width: 100%; max-width: 600px; min-height: 100vh; 
+    margin: 0 auto; padding: 100px 24px 40px; 
+}
+
+.sticky-close { 
+    position: fixed; top: 20px; right: 20px; background: var(--accent); 
+    border: none; color: white; padding: 12px 24px; border-radius: 50px; 
+    font-weight: bold; z-index: 10001; box-shadow: 0 10px 20px rgba(255,79,18,0.3);
+}
+
+/* Красивые карточки внутри модалки (Эффекты) */
+.effect-card {
+    background: var(--card); border-radius: 16px; padding: 16px;
+    margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.05);
+}
+
+.highlight { color: var(--accent); font-weight: bold; }
