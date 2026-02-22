@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ростелеком | Цифровая Территория</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="container">
+            <div class="logo-group">
+                <span class="rt-logo">Ростелеком</span>
+                <span class="office-label">ПРОЕКТНЫЙ ОФИС</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-minimal">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">Цифровая<br>территория</h1>
+            <p>Промышленная автоматизация и импортозамещение.</p>
+        </div>
+    </section>
+
+    <nav class="nav-container container">
+        <div class="nav-item" onclick="openSlide('robotics')" style="background-image: url('https://i.ibb.co/1GtNrqPj/image.png');">
+            <div class="nav-overlay"></div>
+            <h3>Роботизация производства</h3>
+        </div>
+        <div class="nav-item" onclick="openSlide('quality')" style="background-image: url('https://i.ibb.co/6dL0hc9/image.png');">
+            <div class="nav-overlay"></div>
+            <h3>Контроль качества</h3>
+        </div>
+        <div class="nav-item" onclick="openSlide('security')" style="background-image: url('https://i.ibb.co/XZ65YFQb/image.png');">
+            <div class="nav-overlay"></div>
+            <h3>Средства охраны</h3>
+        </div>
+    </nav>
+
+    <div id="modal" class="modal-overlay hidden">
+        <button class="sticky-close" onclick="closeSlide()">× ЗАКРЫТЬ</button>
+        <div class="modal-window">
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
